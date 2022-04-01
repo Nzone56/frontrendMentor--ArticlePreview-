@@ -1,3 +1,17 @@
+$Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+$Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+$Grayish-Blue: hsl(212, 23%, 69%);
+$Light-Grayish-Blue: hsl(210, 46%, 95%);
+@mixin parragraph {
+    color: $Desaturated-Dark-Blue;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+@mixin title($font-size: 1.6rem) {
+    font-weight: 700;
+    font-size: $font-size;
+    color: $Very-Dark-Grayish-Blue;    
+}
 *{
     box-sizing: border-box;
     padding: 0; 
@@ -6,4 +20,78 @@
 }
 html{
     font-size: 62.5%;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $Light-Grayish-Blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+    width: 86%;
+    min-height: 80%;
+    background-color: white;
+    box-shadow: 0 0 5px 0 $Very-Dark-Grayish-Blue;
+    
+
+    &__image{
+        background-image: url(../images/drawers.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        min-height: 20rem;
+        
+    }
+    &__description{
+        h1{
+            @include title();
+            margin: 12.5% 10% 0% 10%;
+            line-height: 2.2rem;
+        }
+        p{
+            @include parragraph(); 
+            margin: 5% 10% 0% 10%;
+            line-height: 2.2rem;
+        }
+
+    }
+    .share{
+        box-shadow: inset 0px 0px 0px 6px $Light-Grayish-Blue, 0px 0px 0px 10px $Light-Grayish-Blue;
+        :hover{
+            box-shadow: inset 0px 0px 0px 6px black, 0px 0px 0px 10px $Light-Grayish-Blue;
+            cursor: pointer;
+        }
+    }
+
+    &__author{
+        margin: 10%;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        img{
+            max-width: 17.5%;
+            border-radius: 50%;
+            
+        }
+        div{
+            flex-basis: 100%;
+            margin-left: 8%;
+        }
+        span{
+            @include title($font-size: 1.5rem);
+        }
+        p{
+            @include parragraph();
+        }
+    }
 }

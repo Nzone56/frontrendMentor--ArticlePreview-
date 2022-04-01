@@ -9,4 +9,116 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Manrope', sans-serif;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.3rem;
+  width: 86%;
+  min-height: 80%;
+  background-color: white;
+  -webkit-box-shadow: 0 0 5px 0 #48556a;
+          box-shadow: 0 0 5px 0 #48556a;
+}
+
+.card__image {
+  background-image: url(../images/drawers.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 20rem;
+}
+
+.card__description h1 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #48556a;
+  margin: 12.5% 10% 0% 10%;
+  line-height: 2.2rem;
+}
+
+.card__description p {
+  color: #6d7f97;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 5% 10% 0% 10%;
+  line-height: 2.2rem;
+}
+
+.card .share {
+  -webkit-box-shadow: inset 0px 0px 0px 6px #ecf2f8, 0px 0px 0px 10px #ecf2f8;
+          box-shadow: inset 0px 0px 0px 6px #ecf2f8, 0px 0px 0px 10px #ecf2f8;
+}
+
+.card .share :hover {
+  -webkit-box-shadow: inset 0px 0px 0px 6px black, 0px 0px 0px 10px #ecf2f8;
+          box-shadow: inset 0px 0px 0px 6px black, 0px 0px 0px 10px #ecf2f8;
+  cursor: pointer;
+}
+
+.card__author {
+  margin: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.card__author img {
+  max-width: 17.5%;
+  border-radius: 50%;
+}
+
+.card__author div {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-left: 8%;
+}
+
+.card__author span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #48556a;
+}
+
+.card__author p {
+  color: #6d7f97;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
 /*# sourceMappingURL=style.css.map */
